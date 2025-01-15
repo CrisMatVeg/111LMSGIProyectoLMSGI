@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Autor: Cristian Mateos Vega
+Ultima fecha de modificación: 25/10/2024
+Descripción: página con imagenes, audios y videos con distintos formatos
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
+    <meta name="author" content="Cristian Mateos Vega">
+    <meta name="description" content="Imagenes viajes">
+    <title>ud2.4 Cristian Mateos Vega</title>
+    <link rel="stylesheet" href="./estilos.css" type="text/css">
+    <style></style>
+</head>
+<body>
+    <div class="head">
+        <header>
+            <h1>MULTIMEDIA: PAISES</h1>
+        </header>
+    </div>
+    <main>
+        <div class="container">
+            <!--contenedor de imagenes-->
+            <div class="imagenes">
+                <!--Imagen PNG-->
+                <div><img src="./media/images/mapa.png" alt="Mapa en PNG" width="300" height="300"></div>
+                <!--Imagen SVG-->
+                <div><img src="./media/images/mapa2.svg" alt="Mapa en SVG" width="300" height="300"></div>
+                <!--Imagen GIF-->
+                <div><img src="./media/images/mapagif.gif" alt="Mapa en GIF" width="300" height="300"></div>
+            </div>
+            <!--contenedor de videos-->
+            <div class="videos">
+                <!--Video WEBM-->
+                <div>
+                    <video controls height="300">
+                        <source src="media/videos/spain.webm" type="video/webm">
+                    </video>
+                </div>
+                <!--Video MP4 y OGG-->
+                <div>
+                    <video controls height="300">
+                        <source src="media/videos/italy.mp4" type="video/mp4">
+                        <source src="media/videos/italy.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div>
+                    <iframe width="560" height="300" src="https://www.youtube.com/embed/eMF5K4UC9B4?si=3H2R31qkdqAoHNR6"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--contenedor de audios-->
+            <div class="audios">
+                <!--Audio MP3-->
+                <div>
+                    <audio controls>
+                        <source src="media/audios/spain.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <!--Otro MP3 y un OGG-->
+                <div>
+                    <audio controls>
+                        <source src="media/audios/italyam.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+                <!--Audio WAV-->
+                <div>
+                    <audio controls>
+                        <source src="media/audios/greece.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <address>2024-25 IES LOS SAUCES. &#169;Todos los derechos reservados. <a href="https://daw111.ieslossauces.es/">Cristian Mateos Vega</a></address>
+        <p>Ultima modificación el: <time datetime="2024-12-08">08-12-2024</time></p>
+        <a id="enlaceW3c"
+            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdaw111.ieslossauces.es%2F111LMSGIProyectoLMSGI%2Fud2%2F04%2Findex.html"
+            target="_blank">
+            <img src="../../webroot/media/W3C.png" alt="Validado por W3C" width="88"
+                height="31" title="Validado por W3C">
+        </a>
+    </footer>
+</body>
+
+</html>

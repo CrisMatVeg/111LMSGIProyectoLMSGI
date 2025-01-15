@@ -1,0 +1,301 @@
+body{
+  background-color: #6BDAB7;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+}
+.label-fuera{
+  text-align: center;
+  font-size:30px;
+  border-width: 4px;
+  margin: 15px;
+}
+input{
+  border-radius: 30px;
+  border-width: 4px;
+  border-style: solid;
+  color: white;
+  
+  margin: 5px;
+}
+#buscar, #destinos{
+  border-color:#027367;
+  background-color: #009485;
+  justify-content: center;
+  
+}
+#buscar::placeholder{
+  color: #6BDAB7;
+  margin: 5px;
+  padding: 5px;
+}
+.enviarform{
+  justify-content: center;
+  display: flex;
+}
+fieldset,legend{
+  background-color:#FFB861;
+  border-radius: 30px;
+  border-width: 10px;
+  border-style: solid;
+  border-color:#F28B66;
+  color:#854C38;
+  margin: 5px;
+  padding: 5px;
+}
+fieldset input{
+  border-color:#F28B66;
+  background-color: #F29B66;
+}
+::placeholder{
+  color: white;
+}
+#etcolor{
+  width: 50px;
+  height: 50px;
+}
+#enviar{
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+#destinos,#label-destinos{
+  text-align: center;
+  width: 200px;
+  height: 30px;
+}
+#submit:hover,#reset:hover,#enviar:hover{
+  height: 60px; width: 80px;
+}
+legend{
+  margin: 10px;
+  padding: 20px;
+}
+header,footer{
+  border-color:#027367;
+  background-color: #009485;
+  border-radius: 30px;
+  border-width: 10px;
+  border-style: solid;
+  text-align: center;
+  
+  
+  justify-content: center;
+  color: #003832;
+}
+button{
+  height: 230px; width: 230px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  border-width: 0px;
+  color: transparent;
+  position: relative;
+  transition: color 0.5s, height 0.5s, width 0.5s;
+  z-index: 1;
+  overflow: hidden;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  
+}
+button:hover{  
+  height: 260px; width: 260px;
+  background-size: cover;
+  text-align: center;
+  border-width: 5px;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: -1;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 5px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+/*css botón España*/
+#españa{
+  background-image: url(../imagenes/spain.jpg);
+}
+#españa:hover{
+  border-color: red;
+  color: red;
+}
+#españa:hover::before{
+  background: linear-gradient(0deg, rgba(255,0,0,0.5) 0%, rgba(255,248,0,0.5) 50%, rgba(255,0,0,0.5) 100%);
+}
+/*css botón Francia*/
+#francia{
+  background-image: url(../imagenes/france.jpg);
+  grid-row-start: 2;
+  grid-row-end: 2; 
+}
+#francia:hover{
+  border-color: darkblue;
+  color: blue; 
+}
+#francia:hover::before{
+  background: linear-gradient(90deg, rgba(0,86,255,0.5) 0%, rgba(255,255,255,0.5) 50%, rgba(255,0,0,0.5) 100%);
+}
+/*css botón Italia*/
+#italia{
+  background-image: url(../imagenes/italy.jpg);
+}
+#italia:hover,#portugal:hover{
+  border-color: green;
+  color: red; 
+}
+#italia:hover::before{
+  background: linear-gradient(90deg, rgba(16,224,0,0.5) 0%, rgba(255,255,255,0.5) 50%, rgba(255,0,0,0.5) 100%);
+}
+/*css botón Italia*/
+#portugal{
+  background-image: url(../imagenes/portugal.jpg); 
+}
+#portugal:hover::before{
+  background: linear-gradient(90deg, rgba(16,134,0,0.5) 35%, rgba(255,0,0,0.5) 45%);
+}
+/*css botón Grecia*/
+#grecia{
+  background-image: url(../imagenes/greece.jpg); 
+}
+#grecia:hover{
+  border-color: blue;
+  color: white; 
+}
+#grecia:hover::before{
+  background: linear-gradient(0deg, rgba(0,86,255,0.5) 0%, rgba(255,255,255,0.5) 25%, rgba(0,86,255,0.5) 50%, rgba(255,255,255,0.5) 75%, rgba(0,86,255,0.5) 100%);
+}
+/*css botón Suiza*/
+#suiza{
+  background-image: url(../imagenes/switzerland.jpg); 
+}
+#suiza:hover{
+  border-color: red;
+  color: white; 
+}
+#suiza:hover::before{
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,0,0,0.5) 50%);
+}
+/*css botón Austria*/
+#austria{
+  background-image: url(../imagenes/austria.jpg); 
+}
+#austria:hover{
+  border-color: red;
+  color: red; 
+}
+#austria:hover::before{
+  background: linear-gradient(0deg, rgba(255,0,0,0.5) 0%, rgba(255,255,255,0.5) 50%, rgba(255,0,0,0.5) 100%);
+}
+/*css botón Belgica*/
+#belgica{
+  background-image: url(../imagenes/belgium.jpg); 
+}
+#belgica:hover{
+  border-color: black;
+  color: red; 
+}
+#belgica:hover::before{
+  background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(254,255,0,0.5) 50%, rgba(255,0,0,0.5) 100%);
+}
+/*css botón Noruega*/
+#noruega{
+  background-image: url(../imagenes/norway.jpg); 
+}
+#noruega:hover{
+  border-color: darkblue;
+  color: red; 
+}
+#noruega:hover::before{
+  background: linear-gradient(90deg, rgba(212,0,0,0.5) 0%, rgba(255,255,255,0.5) 30%, rgba(5,0,152,0.5) 50%, rgba(255,255,255,0.5) 70%, rgba(212,0,0,0.5) 100%);
+}
+/*css botón Suecia*/
+#suecia{
+  background-image: url(../imagenes/sweden.jpg); 
+}
+#suecia:hover{
+  border-color: gold;
+  color: gold; 
+}
+#suecia:hover::before{
+  background: linear-gradient(90deg, rgba(0,86,255,0.5) 30%, rgba(255,248,0,0.5) 50%, rgba(0,86,255,0.5) 70%);
+}
+/*css botón Islandia*/
+#islandia{
+  background-image: url(../imagenes/iceland.jpg); 
+}
+#islandia:hover{
+  border-color: blue;
+  color: darkred; 
+}
+#islandia:hover::before{
+  background: linear-gradient(90deg, rgba(0,27,177,0.5) 0%, rgba(255,255,255,0.5) 30%, rgba(221,0,0,0.5) 50%, rgba(255,255,255,0.5) 70%, rgba(0,27,177,0.5) 100%);
+}
+/*css botón Alemania*/
+#alemania{
+  background-image: url(../imagenes/germany.jpg); 
+}
+#alemania:hover{
+  border-color: black;
+  color: yellow; 
+}
+#alemania:hover::before{
+  background: linear-gradient(0deg, rgba(255,244,0,0.5) 0%, rgba(255,0,0,0.5) 50%, rgba(0,0,0,0.5) 100%);
+}
+/*css botón Reino Unido*/
+#reino-unido{
+  background-image: url(../imagenes/uk.jpg); 
+}
+#reino-unido:hover{
+  border-color: blue;
+  color: red; 
+}
+#reino-unido:hover::before{
+  background: linear-gradient(0deg, rgba(0,32,190,0.5) 0%, rgba(255,255,255,0.5) 30%, rgba(218,0,0,0.5) 50%, rgba(255,255,255,0.5) 70%, rgba(0,32,190,0.5) 100%);
+}
+/*css botón Irlanda*/
+#irlanda{
+  background-image: url(../imagenes/ireland.jpg); 
+}
+#irlanda:hover{
+  border-color: green;
+  color: orangered; 
+}
+#irlanda:hover::before{
+  background: linear-gradient(90deg, rgba(16,224,0,0.5) 0%, rgba(255,255,255,0.5) 50%, rgba(255,128,0,0.5) 100%);
+}
+/*css botón Croacia*/
+#croacia{
+  background-image: url(../imagenes/croatia.jpg); 
+}
+#croacia:hover{
+  border-color: red;
+  color: blue; 
+}
+#croacia:hover::before{
+  background: linear-gradient(0deg, rgba(0,99,255,0.5) 0%, rgba(255,255,255,0.5) 50%, rgba(255,0,0,0.5) 100%);
+}

@@ -1,0 +1,36 @@
+.uno div,.dos div,.tres div,.cuatro div,.cinco div{
+    border-style: ridge;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 3px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+.uno,.dos,.tres,.cuatro,.cinco{
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+.uno div{
+    background-image: url(./imagenes/dot.png);
+    background-position: 50% 50%;
+}
+.dos div{
+    background-image: url(./imagenes/dot.png),url(./imagenes/dot.png);
+    background-position: 0% 0%, 100% 100%;
+}
+.tres div{
+    background-image: url(./imagenes/dot.png),url(./imagenes/dot.png),url(./imagenes/dot.png);
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+}
+.cuatro div{
+    background-image: url(./imagenes/dot.png),url(./imagenes/dot.png),url(./imagenes/dot.png),url(./imagenes/dot.png);
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+}
+.cinco div{
+    background-image: url(./imagenes/dot.png),url(./imagenes/dot.png),url(./imagenes/dot.png),url(./imagenes/dot.png),url(./imagenes/dot.png);
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%, 50% 50%;
+}

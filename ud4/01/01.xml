@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Nombre: Cristian Mateos
+Descripción: Información de un mail
+Fecha:25-11-2024
+-->
+<mail xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="01.xsd">
+    <remitente>cristian@email.com</remitente>
+    <destinatarios>
+        <destinatario>Amor</destinatario>
+        <destinatario>Meli</destinatario>
+        <destinatario>Ambrosio</destinatario>		 
+    </destinatarios>
+    <fecha>
+        <dia>24</dia>
+        <mes>11</mes>
+        <anio>2024</anio>
+    </fecha>  
+    <asunto>Prueba</asunto>
+    <mensaje>
+        <h2>MENSAJE</h2>
+    </mensaje>
+    <ficheros_adjuntos>
+        <fichero>
+            <nombre>hola.jpg</nombre>
+            <tipo>image.jpeg</tipo>
+        </fichero>
+    </ficheros_adjuntos>
+</mail>

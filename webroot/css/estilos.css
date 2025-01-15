@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    white-space: pre;
+}
+proggrammingLanguages{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    border: 1px solid #ff0000;
+    width: 2000px;
+}
+
+lenguaje{
+    background-color: #fff;
+    min-width: 250px;
+}
+
+header,footer{
+    border-color: darkgreen;
+    border-style: dotted;
+}
+
+example::after{
+    content: ' \A';
+}
+
+example{
+    display: block;
+    background-color: rgb(189, 189, 189);
+    color: #000000;
+}
+
+description{
+    color: red;
+    display: block;
+    border: 1px solid darkgreen;
+    text-wrap: wrap;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+Autor: Cristian Mateos Vega
+Ultima fecha de modificación: 18/10/2024
+Descripción: Formulario sobre un tema especifico con diferentes elementos y css
+-->
+<html lang="en">
+<head>
+    <style>
+        *{
+            cursor: url(./imagenes/cursor.cur), auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristian Mateos Vega">
+    <meta name="description" content="Formulario viajes">
+    <title>Ud2.3 Cristian Mateos Vega</title>
+    <link rel="icon" type="image/x-icon" href="../../media/favicon/favicon.ico">
+    <link rel="stylesheet" href="css/estilos.css"  type="text/css">
+</head>
+<body>
+    <header><h1>Plantilla de formulario de viaje</h1></header>
+    <main>
+        <form action="formulario.php" target="_blank">
+            <!--16. Elemento search-->
+            <div class="label-fuera"><input type="search" id="buscar" name="buscar" size="150" placeholder="Buscar:"><br></div>
+<!--Apartado de datos personales-->
+            <fieldset class="personales"><legend>Datos Personales:</legend>
+                <!--1. Texto validando número mínimo y máximo de carácteres, si es requerido o no y el tamaño de la caja-->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="20" size="20" placeholder="Nombre" required><br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" minlength="2" maxlength="60" size="30" placeholder="Apellidos" required><br>
+                <!--2. Elemento radio, uno de los elementos debe estár activo-->
+                <label>Sexo:</label><br>
+                <input type="radio" id="masculino" name="sexo" value="Masculino" checked>
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="femenino" name="sexo" value="Femenino">
+                <label for="femenino">Femenino</label><br>
+                <input type="radio" id="nolodice" name="sexo" value="Prefiero no decirlo">
+                <label for="nolodice">Prefiero no decirlo</label><br>
+                <!--4. Elemento email, indicando algunos atributos como required, pattern, size...-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" size="30" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="Formato: ---@---.---" required><br>
+                <!--18. Elemento password-->
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener 8 o más caracteres que sean al menos un número y una letra mayúscula y minúscula:"><br>
+                <!--5. Elemento tel, validado con pattern-->
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" name="tel" pattern="^[69]\d{8}$"><br>
+                <!--17. Elemento url-->
+                <label for="pagina">Introduzca el link a su pagina personal:</label>
+                <input type="url" id="pagina" name="pagina"><br>
+                <!--20. Elemento file-->
+                <label for="dni">Copia del DNI o pasaporte:</label>
+                <input type="file" id="dni" name="dni"><br>
+            </fieldset>
+<!--Apartado de datos del viaje-->
+            <fieldset class="viaje"><legend>Datos del viaje:</legend>
+                <!--6. Elemento date, validado entre un rango de fechas y un valor por defecto-->
+                <label for="date">Fecha del viaje:</label>
+                <input type="date" id="date" name="date" min="2024-11-01" max="2027-01-01" value="2024-11-01"><br>
+                <!--7. Elemento time, validado entre un rango-->
+                <label for="time">Hora del viaje:</label>
+                <input type="time" id="time" name="time" min="05:00" max="11:59" value="05:00"><br>
+                <!--8. Elemento week-->
+                <label for="semana">Hasta la semana:</label>
+                <input type="week" id="semana" name="semana" min="2024-W45" max="2027-W02" value="2024-W45"> O
+                <!--9. Elemento month-->
+                <label for="mes">hasta el mes:</label>
+                <input type="month" id="mes" name="mes" min="2024-11" max="2027-01" value="2024-11"><br>
+                <!--10. Elemento range-->
+                <label for="precio">Rango de precios:</label>
+                20€<input type="range" id="precio" name="precio" min="20" max="10000" step="100">10.000€<br>
+                <!--11. Lista desplegable-->
+                <label for="vuelo">Aeropuerto:</label>
+                <input list="avion" id="vuelo" name="vuelo" size="30" placeholder="Elija o introduzca su aeropuerto ">
+                    <datalist id="avion">
+                        <option value="Aeropuerto Barcelona-El Prat (BCN)">Barcelona</option>
+                        <option value="Aeropuerto Madrid-Barajas (MAD)">Madrid</option>
+                        <option value="Aeropuerto de León (LEN)">León</option>
+                        <option value="Aeropuerto de Valladolid (VLL)">Valladolid</option>
+                        <option value="Aeropuerto de Valencia (VLC)">Valencia</option>
+                    </datalist><br>
+                <!--19. Elemento number-->
+                <label for="niños">Cuantos niños:</label>
+                <input type="number" id="niños" name="niños" value="0" min="0" max="5"><br>
+                <label for="adultos">Cuantos adultos:</label>
+                <input type="number" id="adultos" name="adultos" value="0" min="0" max="10"><br>
+                <!--3. Elemento checkbox, el primer elemento está activo y/o multiples selecciones-->
+                <label>Servicios solicitados:</label><br>
+                <div class="servicios"><label for="masespacio">Asiento con más espacio</label>
+                    <input type="checkbox" id="masespacio" name="masespacio" value="Asiento con más espacio" checked><br>
+                    <label for="vip">Clase VIP</label>
+                    <input type="checkbox" id="vip" name="vip" value="Clase VIP"><br>
+                    <label for="maleta">Otra maleta</label>
+                    <input type="checkbox" id="maleta" name="maleta" value="Otra maleta"><br>
+                    <label for="guia">Etiqueta personalizada para equipaje</label>
+                    <input type="checkbox" id="etiqueta" name="etiqueta" value="Etiqueta personalizada para equipaje"><br>
+                    <label for="guia">Guía turístico en destino</label>
+                    <input type="checkbox" id="guia" name="guia" value="Guía turístico en destino"><br>
+                </div>
+                <!--21. Elemento color-->
+                <label for="etcolor">Color de etiqueta personalizada (si la ha elegido):</label>
+                <input type="color" id="etcolor" name="etcolor"><br>
+                <!--15. Elemento hidden-->
+                <input type="hidden" id="id-agencia" name="id-agencia" value="52937"><br>
+                <!--13. Elemento textarea-->
+                <label for="preferencias">Necesidades especiales o preferencias:</label><br>
+                <textarea name="preferencias" id="preferencias" rows="4" cols="50" placeholder="Escriba aqui:"></textarea><br>
+            </fieldset>
+            <!--12. Lista de opciones definidas-->
+            <div class="label-fuera"><label for="destinos">Seleccione destino:</label>
+                <select name="destinos" id="destinos">
+                    <option value="españa">España</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="francia">Francia</option>
+                    <option value="italia">Italia</option>
+                    <option value="alemania">Alemania</option>
+                    <option value="grecia">Grecia</option>
+                    <option value="uk">Reino Unido</option>
+                    <option value="irlanda">Irlanda</option>
+                    <option value="suiza">Suiza</option>
+                    <option value="austria">Austria</option>
+                    <option value="noruega">Noruega</option>
+                    <option value="suecia">Suecia</option>
+                    <option value="croacia">Croacia</option>
+                    <option value="belgica">Bélgica</option>
+                    <option value="islandia">Islandia</option>
+                </select>
+            </div>
+            <!--EXTRA 24. botones-->
+            <div class="container">
+                <div><button type="button" id="españa" name="españa">ESPAÑA</button></div>
+                <div><button type="button" id="francia" name="españa">FRANCIA</button></div>
+                <div><button type="button" id="italia" name="españa">ITALIA</button></div>
+                <div><button type="button" id="portugal" name="españa">PORTUGAL</button></div>
+                <div><button type="button" id="grecia" name="españa">GRECIA</button></div>
+                <div><button type="button" id="croacia" name="españa">CROACIA</button></div>
+                <div><button type="button" id="suiza" name="españa">SUIZA</button></div>
+                <div><button type="button" id="austria" name="españa">AUSTRIA</button></div>
+                <div><button type="button" id="belgica" name="españa">BELGICA</button></div>
+                <div><button type="button" id="noruega" name="españa">NORUEGA</button></div>
+                <div><button type="button" id="suecia" name="españa">SUECIA</button></div>
+                <div><button type="button" id="islandia" name="españa">ISLANDIA</button></div>
+                <div><button type="button" id="reino-unido" name="españa">REINO UNIDO</button></div>
+                <div><button type="button" id="irlanda" name="españa">IRLANDA</button></div>
+                <div><button type="button" id="alemania" name="españa">ALEMANIA</button></div>
+            </div>
+<!--Apartado de envío-->
+            <fieldset class="enviarform">
+                <!--14. Elemento image-->
+                <input type="image" id="enviar" name="enviar" src="./imagenes/submit.png" alt="Enviar" height="50" width="50">
+                <!--22. Elemento submit-->
+                <input type="submit" id="submit" name="submit">
+                <!--23. Elemento reset-->
+                <input type="reset" id="reset" name="reset"><br>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <address>2024-25 IES LOS SAUCES. &#169;Todos los derechos reservados. <a href="https://daw111.ieslossauces.es/">Cristian Mateos Vega</a></address>
+        <p>Ultima modificación el: <time datetime="2024-12-08">08-12-2024</time></p>
+        <a id="enlaceW3c" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdaw111.ieslossauces.es%2F111LMSGIProyectoLMSGI%2Fud2%2F03%2Findex.html"
+            target="_blank">
+            <img src="../../webroot/media/W3C.png" alt="Validado por W3C" width="88"
+                height="31" title="Validado por W3C">
+        </a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!ELEMENT mail (remitente,destinatarios,fecha,asunto?,mensaje,ficheros_adjuntos?)>
+    <!ELEMENT remitente (#PCDATA)>
+    <!ELEMENT destinatarios (destinatario+)>
+    <!ELEMENT destinatario (#PCDATA)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT fecha (dia, mes, anio)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT mensaje (#PCDATA |h2|strong|h3|ul|li|p)*>
+    <!ELEMENT ficheros_adjuntos (fichero+)>
+    <!ELEMENT fichero (nombre,tipo)>

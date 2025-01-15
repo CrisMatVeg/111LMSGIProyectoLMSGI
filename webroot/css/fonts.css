@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Eagle Lake';
+    src: url(../font/EagleLake-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../../webroot/font/Roboto_Slab/static/RobotoSlab-Black.ttf);
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url(../../webroot/font/Merriweather/Merriweather-Black.ttf);
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../webroot/font/Montserrat/static/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family: 'Spotify Mix';
+    src: url(../../webroot/font/SpotifyMix/SpotifyMix-Regular.ttf);
+}

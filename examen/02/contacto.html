@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+Autor: Cristian Mateos Vega
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cristian Mateos">
+    <meta name="description" content="Inicio de Sesión">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los juegos del hambre-Inicio</title>
+    <link rel="stylesheet" href="./webroot/css/estilos.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./webroot/media/images/favicon.png">
+</head>
+<body>
+    <header>
+        <h1>LOS JUEGOS DEL HAMBRE</h1>
+        <p>Susane Collins</p>
+    </header>
+    <nav id="menu">
+        <ul>
+            <li><a href="./inicio.html">INICIO</a></li>
+            <li><a href="./personajes.html">PERSONAJES</a></li>
+            <li><a href="./lasaga.html">LA SAGA</a></li>
+            <li><a href="./extras.html">EXTRAS</a></li>
+            <li id="pagactual"><a href="#">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="contactoformulario">
+            <h2>Iniciar Sesión</h2>
+            <div id="formulario">
+            <form action="formulario.php">
+                <label for="email">Usuario</label><br>
+                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="20" size="20" placeholder="Usuario" required><br>
+                <label for="contraseña">Contraseña</label><br>
+                <input type="password" id="contraseña" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Contraseña" title= "Contraseña"><br>
+                <input type="submit" id="submit" name="submit" placeholder="">
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <address>&#169; 2024 Los Juegos del Hambre Fan Page | Todos los derechos reservados.</address>
+    </footer>
+</body>
+
+</html>

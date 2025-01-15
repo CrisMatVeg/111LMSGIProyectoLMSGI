@@ -1,0 +1,147 @@
+:root {
+    --color1: #2C3E50;
+    /*color de fondo header y footer*/
+    --color2: yellow;
+    /* titulo nivel 1, menú activo,*/
+    --color3: white;
+    --color4: orange;
+    /* titulo nivel 4*/
+    --colorboton: #3498db;
+    /* color boton*/
+    --colorbotonhover: #2980b9;
+    --colorrequired: lightyellow;
+    /*input con atributo required*/
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(../media/images/fondo.jpg);
+    color: var(--color3);
+}
+header{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#menu a{
+    color: var(--color3);
+    text-decoration: none;
+    font-size: 20px;
+}
+h2{
+    color: var(--color2);
+}
+#pagactual a{
+    color: var(--color2);
+}
+header,footer{
+    background-color: var(--color1);
+    display: block;
+}
+main{
+    height: 1150px;
+    display: flex;
+    flex-direction: column;
+}
+table{
+    width: 400px;
+}
+th,td{
+    border: 1px solid var(--color3);
+    height: 40px;
+}
+main{
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+nav{
+    display: flex;
+    align-items: start;
+    margin-top: 10px;
+}
+#menu a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--color2);
+}
+.cajalibros{
+    gap: 20px;
+}
+#contactoformulario{
+    background-color: var(--color1);
+    padding: 10px;
+    width: 500px;
+    height: 400px;
+}
+#formulario{
+    text-align: start;
+    padding: 10px;
+}
+#formulario input{
+    height: 30px;
+    width: 100%;
+}
+#submit{
+    background-color: var(--colorboton);
+}
+#submit:hover{
+    background-color: var(--colorbotonhover);
+}
+.libro{
+    margin: 20px;
+    color: black;
+}
+.libroindi{
+    background-color: var(--color3);
+    display: flex;
+    text-align: start;
+    padding: 10px;
+}
+.libroindi img{
+    margin-right: 10px;
+}
+.libroindi p{
+    display: flex;
+    align-items: center;
+}
+.libro h3{
+    color: var(--color4);
+    margin-bottom: 10px;
+}
+#personajescajas{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+th{
+    background-color: var(--color1);
+    text-align: center; 
+}
+.char{
+    border: 1px solid var(--color3);
+    padding: 10px;
+    color: var(--color4);
+}
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+#tabla h2{
+    padding: 30px;
+}
+li{
+    display: inline;
+    padding: 15px;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT proggrammingLanguages (lenguaje+)>
+<!ELEMENT lenguaje (description,example)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT example (#PCDATA)>
+<!ATTLIST lenguaje nombre CDATA #REQUIRED>
