@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Univerdidad-->
+<!ELEMENT universidad (nombre,fechaconstruccion,pais,carreras,asignaturas,alumnos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechaconstruccion (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!--Cerreras-->
+<!ELEMENT carreras (carrera+)>
+<!ELEMENT carrera (nombre,plan,creditos,centro,subdirector?)?>
+<!ELEMENT plan (#PCDATA)>
+<!ELEMENT creditos (#PCDATA)>
+<!ELEMENT centro (#PCDATA)>
+<!ELEMENT subdirector (#PCDATA)>
+<!--Asignaturas-->
+<!ELEMENT asignaturas (asignatura+)>
+<!ELEMENT asignatura (nombre,creditos_teoricos,creditos_practicos,trimestre)?>
+<!ELEMENT creditos_teoricos (#PCDATA)>
+<!ELEMENT creditos_practicos (#PCDATA)>
+<!ELEMENT trimestre (#PCDATA)>
+<!--Alumnos-->
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (apellido1,apellido2,nombre,sexo,estudios)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT estudios (carrera,asignaturas,proyecto?)>
+<!ELEMENT proyecto (#PCDATA)>
+<!--ATRIBUTOS-->
+<!ATTLIST asignatura
+    id ID #IMPLIED
+    titulacion CDATA #IMPLIED
+    codigo CDATA #IMPLIED
+> 
+<!ATTLIST carrera
+    id ID #IMPLIED
+    codigo CDATA #IMPLIED
+> 
+<!ATTLIST nombre
+    year CDATA #IMPLIED
+> 
+<!ATTLIST alumno
+    id CDATA #REQUIRED
+    beca NMTOKEN #FIXED "si"
+>
