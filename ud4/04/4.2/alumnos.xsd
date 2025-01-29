@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.example.com/alumnos"
+           targetNamespace="http://www.example.com/alumnos"
+           elementFormDefault="qualified"
+           xmlns:asi="http://www.example.com/asignaturas">
+           <xs:import namespace="http://www.example.com/asignaturas" schemaLocation="asignaturas.xsd"/>
+    <!-- Declaración tipos simples-->
+    <!-- Declaración tipos complejos-->
+    <xs:complexType name="alumno">
+        <xs:sequence>
+            <xs:element name="apellido1" type="xs:string"/>
+            <xs:element name="apellido2" type="xs:string"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="sexo" type="xs:string"/>
+            <xs:element name="estudios" type="estudios"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="beca" type="xs:NMTOKEN" use="optional" fixed="si"/>
+    </xs:complexType>
+    <xs:complexType name="estudios">
+        <xs:sequence>
+            <xs:element name="carrera" type="xs:string"/>
+            <xs:element name="asignaturas" type="asi:asignatura"/>
+            <xs:element name="proyecto" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Declaración de elementos-->
+    <!-- Declaración del esquema-->
+    <xs:element name="alumnos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumno" type="alumno" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
