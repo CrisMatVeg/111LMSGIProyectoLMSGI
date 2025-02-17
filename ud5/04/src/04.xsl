@@ -4,41 +4,46 @@
                 exclude-result-prefixes="#all"
                 expand-text="yes"
                 version="3.0">
+    <xsl:param name="corregido" select="no"/>
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/examen">
-        <html>
-            <head>
-                <title>4- XSLT Tests Cristian Mateos</title>
+            <html>
+                <head>
+                <title>4 XSLT Cristian Mateos</title>
                 <meta charset="UTF-8"/>
-            </head>
-            <body>
-                <header>
-                    <h1><xsl:value-of select="datos/nombreCiclo"/></h1>
-                    <h2>Curso: <xsl:value-of select="datos/curso"/> - Módulo: <xsl:value-of select="datos/nombreModulo"/></h2>
-                    <p><strong>Fecha:</strong> <xsl:value-of select="datos/fecha/dia"/>-<xsl:value-of select="datos/fecha/mes"/>-<xsl:value-of select="datos/fecha/anyo"/></p> 
-                </header>
-                <main>
-                    <h3>Preguntas:</h3>
-                    <xsl:for-each select="preguntas/pregunta">
-                        <div style="margin-bottom: 20px;">
-                            <p><strong><xsl:value-of select="enunciado"/></strong></p>
-                            
-                            <ul>
-                                <xsl:variable name="correcta" select="respuestas/respuesta[@correcta='correcta']"/>
-                                <xsl:for-each select="respuestas/respuesta">
-                                    <li>
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test=". = $correcta"> (Respuesta correcta)</xsl:if>
-                                    </li>
-                                </xsl:for-each>
-                            </ul>
-                        </div>
-                    </xsl:for-each>
-                </main>
-                <footer>
-                    <p><xsl:value-of select="datos/fecha/anyo"/> - Examen de <xsl:value-of select="datos/nombreCiclo"/></p>
-                </footer>
-            </body>
-        </html>
-    </xsl:template>
-</xsl:stylesheet>
+                </head>
+                <body>
+                    <header>
+                        <h1><xsl:value-of select="datos/nombreCiclo"/></h1>
+                        <h2><xsl:value-of select="document('../input/modulosdaw1.xml')/modulos/modulo[@codM=current()/datos/nombreModulo]"/></h2>
+                        <h3>Fecha: <xsl:value-of select="datos/fecha/dia"/> de
+                                   <xsl:value-of select="document('../input/meses.xml')/meses/mes[@id=current()/datos/fecha/mes]"/> de
+                                   <xsl:value-of select="datos/fecha/anyo"/>
+                        </h3>
+                    </header>
+                    <main>
+                        <form action="text.php" method="GET">
+                            <xsl:for-each select="preguntas/pregunta">
+                                <div class="p1">
+                                    <div><xsl:value-of select="@id"/> .-
+                                         <xsl:value-of select="enunciado"/></div>
+                            <xsl:for-each select="respuestas/respuesta">
+                            <div class="respuesta">
+                                <label>
+                                    <xsl:element name="input">
+                                        <xsl:attribute name="type" select="'radio'"/>
+                                        <xsl:attribute name="name" select="concat('p',../../@id)"/>
+                                        <xsl:attribute name="value" select="position()"/>
+                                    </xsl:element>
+                                    <xsl:value-of select="text()"/>
+                                </label>
+                            </div>        
+                            </xsl:for-each>
+                                </div>
+                            </xsl:for-each>
+                        </form>
+                    </main>
+                </body>
+            </html>
+        </xsl:template>
+    </xsl:stylesheet>
