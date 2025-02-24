@@ -4,7 +4,7 @@
                 exclude-result-prefixes="#all"
                 expand-text="yes"
                 version="3.0">
-    <xsl:output method="text" indent="yes"/>
+    <xsl:output method="xml" indent="yes"/>
     <xsl:template match="/network">
         <xsl:variable name="newline" select="'&#10;'"/>
         <xsl:variable name="newtab" select="'    '"/>
