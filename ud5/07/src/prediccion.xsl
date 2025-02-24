@@ -5,15 +5,18 @@
                 expand-text="yes"
                 version="3.0">
     <xsl:output method="html" indent="yes"/>
+    <xsl:include href="../../lib/libhtml.xsl"/>
     <xsl:template match="/prediccion">
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
-                <title>Predicción del Tiempo - Cristian Mateos</title>
                 <link rel="stylesheet" type="text/css" href="../input/prediccion.css"/>
+                <xsl:call-template name="meta">
+                    <xsl:with-param name="titulo" select="'07 XSLT Cristian Mateos'"/>
+                </xsl:call-template>
             </head>
             <body>
-                <h1>Predicción por municipios - Cristian Mateos</h1>
                 <table>
+                    <caption>El Tiempo. <xsl:value-of select="concat(upper-case(municipio/nombre),':')"/></caption>
                     <tr>
                         <th>Día</th>
                         <th>Prob. precip.</th>
