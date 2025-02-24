@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../src/05.xsl"?>
+<root>
+<row anyo="2012" concepto="Usuarios registrados " usuarios_registrados="53577"></row>
+<row anyo="2012" concepto="Préstamos " usuarios_registrados="315402"></row>
+<row anyo="2012" concepto="Asistentes a actividades de animación" usuarios_registrados="24461"></row>
+<row anyo="2012" concepto="Usos de la sala de lectura" usuarios_registrados="254146"></row>
+<row anyo="2012" concepto="Horas de uso multimedia" usuarios_registrados="122043"></row>
+<row anyo="2013" concepto="Usuarios registrados " usuarios_registrados="57851"></row>
+<row anyo="2013" concepto="Préstamos " usuarios_registrados="277315"></row>
+<row anyo="2013" concepto="Asistentes a actividades de animación" usuarios_registrados="25512"></row>
+<row anyo="2013" concepto="Usos de la sala de lectura" usuarios_registrados="249417"></row>
+<row anyo="2013" concepto="Horas de uso multimedia" usuarios_registrados="132328"></row>
+<row anyo="2014" concepto="Usuarios registrados " usuarios_registrados="61498"></row>
+<row anyo="2014" concepto="Préstamos " usuarios_registrados="246892"></row>
+<row anyo="2014" concepto="Asistentes a actividades de animación" usuarios_registrados="26400"></row>
+<row anyo="2014" concepto="Usos de la sala de lectura" usuarios_registrados="246892"></row>
+<row anyo="2014" concepto="Horas de uso multimedia" usuarios_registrados="124504"></row>
+<row anyo="2015" concepto="Usuarios registrados " usuarios_registrados="63991"></row>
+<row anyo="2015" concepto="Préstamos " usuarios_registrados="237366"></row>
+<row anyo="2015" concepto="Asistentes a actividades de animación" usuarios_registrados="26900"></row>
+<row anyo="2015" concepto="Usos de la sala de lectura" usuarios_registrados="288624"></row>
+<row anyo="2015" concepto="Horas de uso multimedia" usuarios_registrados="144225"></row>
+<row anyo="2015" concepto="Seguidores Twitter" usuarios_registrados="947"></row>
+<row anyo="2015" concepto="Seguidores Facebook" usuarios_registrados="713"></row>
+<row anyo="2016" concepto="Usuarios registrados " usuarios_registrados="67432"></row>
+<row anyo="2016" concepto="Préstamos " usuarios_registrados="232648"></row>
+<row anyo="2016" concepto="Asistentes a actividades de animación" usuarios_registrados="27815"></row>
+<row anyo="2016" concepto="Usos de la sala de lectura" usuarios_registrados="301053"></row>
+<row anyo="2016" concepto="Horas de uso multimedia" usuarios_registrados="148993"></row>
+<row anyo="2016" concepto="Seguidores Twitter" usuarios_registrados="1127"></row>
+<row anyo="2016" concepto="Seguidores Facebook" usuarios_registrados="874"></row>
+<row anyo="2017" concepto="Usuarios registrados " usuarios_registrados="50464"></row>
+<row anyo="2017" concepto="Préstamos " usuarios_registrados="224711"></row>
+<row anyo="2017" concepto="Asistentes a actividades de animación" usuarios_registrados="26012"></row>
+<row anyo="2017" concepto="Usos de la sala de lectura" usuarios_registrados="284921"></row>
+<row anyo="2017" concepto="Horas de uso multimedia" usuarios_registrados="145012"></row>
+<row anyo="2017" concepto="Seguidores Twitter" usuarios_registrados="1230"></row>
+<row anyo="2017" concepto="Seguidores Facebook" usuarios_registrados="1047"></row>
+<row anyo="2017" concepto="Accesos al OPAC (Online Public Access Catalog)" usuarios_registrados="143561"></row>
+<row anyo="2018" concepto="Usuarios registrados " usuarios_registrados="49238"></row>
+<row anyo="2018" concepto="Préstamos " usuarios_registrados="199224"></row>
+<row anyo="2018" concepto="Asistentes a actividades de animación" usuarios_registrados="27975"></row>
+<row anyo="2018" concepto="Usos de la sala de lectura" usuarios_registrados="307897"></row>
+<row anyo="2018" concepto="Horas de uso multimedia" usuarios_registrados="182154"></row>
+<row anyo="2018" concepto="Seguidores Twitter" usuarios_registrados="1297"></row>
+<row anyo="2018" concepto="Seguidores Facebook" usuarios_registrados="1201"></row>
+<row anyo="2018" concepto="Accesos al OPAC (Online Public Access Catalog)" usuarios_registrados="155116"></row>
+</root>

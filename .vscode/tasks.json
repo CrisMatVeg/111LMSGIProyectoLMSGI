@@ -3,11 +3,45 @@
 	"tasks": [
 		{
 			"type": "xslt",
-			"label": "xslt: Ticket (New)",
+			"label": "xslt: Alumnos (New)",
 			"saxonJar": "${config:XSLT.tasks.saxonJar}",
 			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
 			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
-			"resultPath": "${workspaceFolder}/ud5/04/target/index.html",
+			"resultPath": "${workspaceFolder}/ud5/02/target/index.html",
+			"allowSyntaxExtensions40": "off",
+			"messageEscaping": "adaptive",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
+		},
+		{
+			"type": "xslt",
+			"label": "xslt: xslt: Ticket (New)",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
+			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
+			"resultPath": "${workspaceFolder}/ud5/03/target/index.html",
+			"allowSyntaxExtensions40": "off",
+			"messageEscaping": "adaptive",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
+		},
+		{
+			"type": "xslt",
+			"label": "xslt: xslt: Tiempo (New)",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
+			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
+			"resultPath": "${workspaceFolder}/ud5/07/target/index.html",
 			"allowSyntaxExtensions40": "off",
 			"messageEscaping": "adaptive",
 			"group": {
