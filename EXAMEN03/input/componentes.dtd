@@ -1,0 +1,4 @@
+<!ELEMENT componentes (componente+)>
+<!ELEMENT componente EMPTY>
+<!ATTLIST componente codigo ID #REQUIRED>
+<!ATTLIST componente nombre CDATA #REQUIRED>

@@ -1,0 +1,82 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="tipoBeneficio">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+<!-- BONO -->
+  <xs:complexType name="tipoBono">
+    <xs:sequence>
+      <xs:element name="valoractual">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+              <xs:attribute name="moneda">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="dolares"/>
+                    <xs:enumeration value="euros"/>
+                    <xs:enumeration value="yenes"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="beneficio" type="tipoBeneficio"/>
+    </xs:sequence>
+  </xs:complexType>
+<!-- FUTURO -->
+  <xs:complexType name="tipoFuturo">
+    <xs:sequence>
+      <xs:element name="elemento">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="idioma" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="beneficio" type="tipoBeneficio"/>
+    </xs:sequence>
+  </xs:complexType>
+<!-- ACCIONES -->
+  <xs:complexType name="tipoAcciones">
+    <xs:sequence>
+      <xs:element name="empresa">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="pais">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="usa|alemania|japon|espana"></xs:pattern>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="beneficio" type="tipoBeneficio"/>
+    </xs:sequence>
+  </xs:complexType>
+<!-- ROOT -->
+  <xs:element name="productosfinancieros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="producto" maxOccurs="unbounded" minOccurs="1">
+          <xs:complexType>
+              <xs:choice>
+                <xs:element name="bono" type="tipoBono"/>
+                <xs:element name="futuro" type="tipoFuturo"/>
+                <xs:element name="acciones" type="tipoAcciones"/>
+              </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

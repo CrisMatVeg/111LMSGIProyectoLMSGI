@@ -5,25 +5,33 @@ Descripción: Información de un mail
 Fecha:25-11-2024
 -->
 <mail xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="01.xsd">
-    <remitente>cristian@email.com</remitente>
+    <remitente>remitente@example.com</remitente>
     <destinatarios>
-        <destinatario>Amor</destinatario>
-        <destinatario>Meli</destinatario>
-        <destinatario>Ambrosio</destinatario>		 
+        <destinatario>destinatario1@example.com</destinatario>
+        <destinatario>destinatario2@example.com</destinatario>
     </destinatarios>
     <fecha>
-        <dia>24</dia>
-        <mes>11</mes>
-        <anio>2024</anio>
-    </fecha>  
-    <asunto>Prueba</asunto>
+        <dia>12</dia>
+        <mes>03</mes>
+        <anio>2025</anio>
+    </fecha>
+    <asunto>Ejemplo de correo en XML</asunto>
     <mensaje>
-        <h2>MENSAJE</h2>
+        <h2>Encabezado del mensaje</h2>
+        <p>Este es un <strong>ejemplo</strong> de mensaje en XML.</p>
+        <ul>
+            <li>Punto 1</li>
+            <li>Punto 2</li>
+        </ul>
     </mensaje>
     <ficheros_adjuntos>
         <fichero>
-            <nombre>hola.jpg</nombre>
-            <tipo>image.jpeg</tipo>
+            <nombre>documento.pdf</nombre>
+            <tipo>application/pdf</tipo>
+        </fichero>
+        <fichero>
+            <nombre>imagen.jpg</nombre>
+            <tipo>image/jpeg</tipo>
         </fichero>
     </ficheros_adjuntos>
 </mail>

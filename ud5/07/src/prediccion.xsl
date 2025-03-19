@@ -17,29 +17,33 @@
             <body>
                 <table>
                     <caption>El Tiempo. <xsl:value-of select="concat(upper-case(municipio/nombre),':')"/></caption>
-                    <tr>
-                        <th>Día</th>
-                        <th>Prob. precip.</th>
-                        <th>Estado del cielo</th>
-                        <th>Temperatura (°C)</th>
-                        <th>Viento (km/h)</th>
-                    </tr>
+                    <xsl:call-template name="tablaencabezado"/>
                     <xsl:apply-templates select="dia"/>
                 </table>
             </body>
         </html>
     </xsl:template>
     
+    <xsl:template name="tablaencabezado">
+        <tr>
+            <th>Día</th>
+            <th>Prob. precip.</th>
+            <th>Estado del cielo</th>
+            <th>Temperatura (°C)</th>
+            <th>Viento (km/h)</th>
+        </tr>
+    </xsl:template>
+    
     <xsl:template match="dia">
         <tr>
             <td><xsl:value-of select="substring(@fecha, 9, 2)"/></td>
-            <td><xsl:value-of select="prob_precipitacion"/>%</td>
+            <td><xsl:value-of select="concat(prob_precipitacion,'%')"/></td>
             <td>
                 <img src="../target/images/{estado_cielo}.gif" alt="{estado_cielo/@descripcion}" title="{estado_cielo/@descripcion}"/>
             </td>
             <td>
-                <span style="color:#F00;"><xsl:value-of select="temperatura/minima"/></span> / 
-                <xsl:value-of select="temperatura/maxima"/>
+                <span class="tmin"><xsl:value-of select="temperatura/minima"/></span> / 
+                <span class="tmax"><xsl:value-of select="temperatura/maxima"/></span>
             </td>
             <td>
                 <img src="../target/images/{viento/direccion}.gif" alt="{viento/direccion}" title="{viento/direccion}"/> 

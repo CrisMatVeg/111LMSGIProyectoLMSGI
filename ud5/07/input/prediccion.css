@@ -4,8 +4,20 @@ body {
     text-align: center;
 }
 
-h1 {
+caption {
+    font-size: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #345A8E;
+    margin-bottom: 20px;
+}
+
+.tmin{
+    color: red;
+}
+
+.tmax{
+    font-weight: bold;
+    color: blue;
 }
 
 table {
