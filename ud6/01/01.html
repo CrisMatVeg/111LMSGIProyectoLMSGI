@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejemplo 8 DOM</title>
+  <title>UD6.1 Cristian Mateos</title>
+  <link rel="stylesheet" href="./01.css" />
 </head>
 
 <body>
-  <h1>Ejemplo 8 DOM: Crear tabla</h1>
+  <h1>Json 1</h1>
+  <div id="datos"></div>
 </body>
 
 <script>
@@ -20,6 +22,8 @@ fetch('./01.json') // URL donde se encuentra el recurso
     return response.json();  // Convertir la respuesta en formato JSON
   })
   .then(jsonData => {
+    const datosDiv = document.getElementById('datos');  // Obtener el elemento donde se mostrarán los datos
+    datosDiv.innerHTML = `<b>Nombre</b>: ${jsonData.nombre} - <b>Edad</b>: ${jsonData.edad} `;  // Mostrar los datos en formato JSON
     console.log(jsonData);  // Aquí puedes trabajar con los datos JSON obtenidos
   })
   .catch(error => {

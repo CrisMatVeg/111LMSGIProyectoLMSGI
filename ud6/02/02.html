@@ -5,33 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Listado de Personas</title>
+  <link rel="stylesheet" href="../01/01.css" />
 </head>
 
 <body>
   <h1>Listado de personas</h1>
   <button>Listar personas</button>
+  <button id="eliminar">Eliminar persona</button>
 </body>
 
 <script>
 
-    fetch('./02.json') // URL donde se encuentra el recurso
-      .then(response => {
-        if (!response.ok) {  // Verificar si la respuesta es exitosa
-          throw new Error('Error en la respuesta');
+  fetch('./02.json') // URL donde se encuentra el recurso
+    .then(response => {
+      if (!response.ok) {  // Verificar si la respuesta es exitosa
+        throw new Error('Error en la respuesta');
+      }
+      return response.json();  // Convertir la respuesta en formato JSON
+    })
+    .then(jsonData => { // Manejar los datos JSON
+      const button = document.querySelector('button');
+      button.addEventListener('click', () => {
+        if (document.querySelector("ul")) {
+          const ul = document.querySelector('ul');
+          ul.remove();
         }
-        return response.json();  // Convertir la respuesta en formato JSON
-      })
-      .then(jsonData => { // Manejar los datos JSON
         const ul = document.createElement('ul');
         jsonData.forEach(persona => {
           const li = document.createElement('li');
-          li.textContent = `Nombre: ${persona.nombre} - Edad: ${persona.edad}`;
+          li.innerHTML = `<b>Nombre:</b> ${persona.nombre} - <b>Edad:</b> ${persona.edad}`;
           ul.appendChild(li);
         });
         document.body.appendChild(ul);  // Agregar la lista al cuerpo del documento
-        console.log(jsonData);  // Aquí puedes trabajar con los datos JSON obtenidos
-      })
-      .catch(error => {
-        console.error('Hubo un problema con la solicitud fetch:', error);
       });
+      console.log(jsonData);
+      // Al pulsar el botón eliminar, se eliminará el primer elemento de la lista
+      const eliminar = document.querySelector('#eliminar');
+      eliminar.addEventListener('click', () => {
+        const ul = document.querySelector('ul');
+        if (ul) {
+          const primerElemento = ul.querySelector('li');
+          if (primerElemento) {
+            primerElemento.remove();
+          }
+        }
+      });
+    })
+    .catch(error => {
+      console.error('Hubo un problema con la solicitud fetch:', error);
+    });
 </script>
