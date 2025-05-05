@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo 8 DOM</title>
+</head>
+
+<body>
+  <h1>Ejemplo 8 DOM: Crear tabla</h1>
+</body>
+
+<script>
+fetch('./01.json') // URL donde se encuentra el recurso
+  .then(response => {
+    if (!response.ok) {  // Verificar si la respuesta es exitosa
+      throw new Error('Error en la respuesta');
+    }
+    return response.json();  // Convertir la respuesta en formato JSON
+  })
+  .then(jsonData => {
+    console.log(jsonData);  // Aquí puedes trabajar con los datos JSON obtenidos
+  })
+  .catch(error => {
+    console.error('Hubo un problema con la solicitud fetch:', error);
+  });
+  </script>

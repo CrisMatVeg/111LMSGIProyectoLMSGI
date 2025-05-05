@@ -1,7 +1,6 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
+    margin: 40px;
     height: 100%;
 }
 
@@ -30,4 +29,11 @@ footer button {
 
 footer button:hover {
     background-color: darkblue;
+}
+
+parrafo_modificado {
+    font-size:"20px";
+    letter-spacing:"2px";
+    transform: rotate(1deg);
+    font-weight: bold;
 }

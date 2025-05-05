@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listado de Personas</title>
+</head>
+
+<body>
+  <h1>Listado de personas</h1>
+  <button>Listar personas</button>
+</body>
+
+<script>
+
+    fetch('./02.json') // URL donde se encuentra el recurso
+      .then(response => {
+        if (!response.ok) {  // Verificar si la respuesta es exitosa
+          throw new Error('Error en la respuesta');
+        }
+        return response.json();  // Convertir la respuesta en formato JSON
+      })
+      .then(jsonData => { // Manejar los datos JSON
+        const ul = document.createElement('ul');
+        jsonData.forEach(persona => {
+          const li = document.createElement('li');
+          li.textContent = `Nombre: ${persona.nombre} - Edad: ${persona.edad}`;
+          ul.appendChild(li);
+        });
+        document.body.appendChild(ul);  // Agregar la lista al cuerpo del documento
+        console.log(jsonData);  // Aquí puedes trabajar con los datos JSON obtenidos
+      })
+      .catch(error => {
+        console.error('Hubo un problema con la solicitud fetch:', error);
+      });
+</script>

@@ -48,20 +48,42 @@ function saludar() {
 }
  
 function cambiarColor() {
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
-    const titulo = document.querySelector("h1"); 
-    if (titulo) {
-        titulo.style.color = "white";
+    const cuerpo = document.body;
+    const titulo = document.querySelector("h1");
+
+    if (cuerpo.style.backgroundColor === "black") {
+        cuerpo.style.backgroundColor = "white";
+        cuerpo.style.color = "black";
+        if (titulo) {
+            titulo.style.color = "black";
+        }
+    } else {
+        cuerpo.style.backgroundColor = "black";
+        cuerpo.style.color = "white";
+        if (titulo) {
+            titulo.style.color = "white";
+        }
     }
 }
 
+let parrafosModificados = false;
 function cambiarParrafos() {
     const parrafos = document.querySelectorAll("p");
-    parrafos.forEach(parrafo => {
-        parrafo.style.fontSize = "20px";
-        parrafo.style.letterSpacing = "2px";
-        parrafo.style.transform = "rotate(1deg)";
-        parrafo.style.fontWeight = "bold";
-    });
+    if (!parrafosModificados) {
+        parrafos.forEach(parrafo => {
+            parrafo.style.fontSize = "20px";
+            parrafo.style.letterSpacing = "2px";
+            parrafo.style.transform = "rotate(1deg)";
+            parrafo.style.fontWeight = "bold";
+        });
+        parrafosModificados = true;
+    } else {
+        parrafos.forEach(parrafo => {
+            parrafo.style.fontSize = "";
+            parrafo.style.letterSpacing = "";
+            parrafo.style.transform = "";
+            parrafo.style.fontWeight = "";
+        });
+        parrafosModificados = false;
+    }
 }

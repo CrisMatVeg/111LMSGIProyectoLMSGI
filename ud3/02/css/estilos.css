@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+  }
+   
+  h1 {
+    color: #000;
+    font-size: 28px;
+  }
+   
+  label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+   
+  input[type="number"] {
+    width: 60px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #4da6ff;
+    color: white;
+    border-radius: 8px;
+    margin-right: 10px;
+    text-align: center;
+  }
+   
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+   
+  input[type="button"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #a6d8ff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+   
+  input[type="button"]:hover {
+    background-color: #88c9ff;
+  }
+   
+  table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 2px solid #4da6ff;
+  }
+   
+  td {
+    border: 1px solid #4da6ff;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 10px 0;
+    background-color: #333333;
+  }
+  footer > *{
+    margin: 7.5px;
+    color: white;
+  }
+  footer > button{
+    background-color: hsl(204, 70%, 53%);
+    border: 2px solid hsl(204, 70%, 43%);
+    border-radius: 5px;
+    padding: 7px 15px;
+    transition: 500ms;
+  }
+  footer > button:hover {
+    background-color: hsl(204, 70%, 43%);
+    border-color: hsl(204, 70%, 33%);
+    transition: 500ms;
+    cursor: pointer;
+  }
+  footer a {
+    color: greenyellow;
+    padding: 0 2px;
+  }
+  footer a:hover {
+    color: hsl(84, 100%, 35%);
+    background-color: hsl(0, 0%, 17%);
+    border-radius: 3.5px;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }

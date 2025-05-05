@@ -4,7 +4,7 @@
                 exclude-result-prefixes="#all"
                 expand-text="yes"
                 version="3.0">
-    <xsl:output method="html" indent="yes"/>
+    <xsl:output method="xml" indent="yes"/>
     <xsl:template match="/root" mode="#all">
         <xsl:copy>
             <xsl:for-each select="row">

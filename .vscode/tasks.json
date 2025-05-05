@@ -85,6 +85,23 @@
 			"problemMatcher": [
 				"$saxon-xslt"
 			]
+		},
+		{
+			"type": "xslt",
+			"label": "xslt: xslt: Usuarios (New)",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${command:xslt-xpath.pickXsltFile}",
+			"xmlSource": "${command:xslt-xpath.pickXmlSourceFile}",
+			"resultPath": "${workspaceFolder}/ud5/05/target/index.xml",
+			"allowSyntaxExtensions40": "off",
+			"messageEscaping": "adaptive",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
 		}
 	]
 }

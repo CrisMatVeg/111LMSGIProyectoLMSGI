@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo 8 DOM</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+  <h1>Ejemplo 8 DOM: Crear tabla</h1>
+  <label for="filas">Número de filas:</label>
+  <input type="number" id="filas" min="1" max="10" value="2">
+  <label for="numerocolumnas">Número de columnas:</label>
+  <input type="number" id="numerocolumnas" min="1" max="10" value="2">
+  <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
+</body>
+
+<footer>
+  <div>Todos los derechos reservados. Creado por: <a
+          href="https://daw111.ieslossauces.es/111LMSGIProyectoLMSGI/index.html">Cristian Mateos Vega</a></div>
+</footer>
+
+<script>
+  function genera_tabla() {
+    let tablaExistente = document.querySelector("table");
+    if (tablaExistente) {
+      tablaExistente.remove();
+    }
+    let tabla = "<table border='1'>";
+    let filas = document.getElementById("filas").value;
+    let columnas = document.getElementById("numerocolumnas").value;
+    for (let i = 0; i < filas; i++) {
+      tabla += "<tr>";
+      for (let j = 0; j < columnas; j++) {
+        tabla += "<td>Fila " + (i + 1) + ", Columna " + (j + 1) + "</td>";
+      }
+      tabla += "</tr>";
+    }
+    tabla += "</table>";
+    document.body.innerHTML += tabla;
+  }
+</script>
+
+</html>

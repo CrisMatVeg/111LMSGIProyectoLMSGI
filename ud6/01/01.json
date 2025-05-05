@@ -1,0 +1,44 @@
+[{
+  "nombre": "Juan",
+  "edad": 20
+},
+{
+  "nombre": "María",
+  "edad": 25
+},
+{
+  "nombre": "Carlos",
+  "edad": 30
+},
+{
+  "nombre": "Ana",
+  "edad": 22
+},
+{
+  "nombre": "Luis",
+  "edad": 28
+},
+{
+  "nombre": "Laura",
+  "edad": 27
+},
+{
+  "nombre": "Pedro",
+  "edad": 35
+},
+{
+  "nombre": "Sofía",
+  "edad": 24
+},
+{
+  "nombre": "Javier",
+  "edad": 29
+},
+{
+  "nombre": "Clara",
+  "edad": 26
+},
+{
+  "nombre": "Diego",
+  "edad": 31
+}]
